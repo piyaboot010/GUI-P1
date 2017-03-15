@@ -1,25 +1,21 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <title>ทุนการศึกษา</title>
-	<meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
-    <style>
-        .mySlides {
-            display: none;
-        }
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="std-login.aspx.cs" Inherits="scholarshipPSUPhuket.std_login" %>
 
-        div.fixed {
-        position: fixed;
-    bottom: 100px;
-    right: 100px;
-    width: 200px;
-    border: 3px solid #73AD21;
-        }
-    </style>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 5.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css"/>
 </head>
 <body>
+    <form id="form1" runat="server">
+    <div>
+    
+    </div>
+    </form>
+
     <!-- Header -->
     <div class="w3-row">
         <div class="w3-col w3-white w3-container" style="width:40%">
@@ -80,17 +76,20 @@
                     <h2>นักศึกษาเข้าสู่ระบบ</h2>
                 </div>
                 <form class="w3-container" action="/std-select.html">
-                    <br>
+                    <br/>
                         <label class="w3-label w3-text-lime"><b>PSU Passport</b></label>
-                        <input class="w3-input w3-border w3-sand" name="log" type="text" id="user_login" value="" size="20">
-                    <br>
+                        <input class="w3-input w3-border w3-sand" name="std-user" type="text"/>
+                    <br/>
                         <label class="w3-label w3-text-lime"><b>Password</b></label>
-                        <input class="w3-input w3-border w3-sand" name="pwd" type="password" id="user_pass" value="" size="20">
+                        <input class="w3-input w3-border w3-sand" name="password" type="password"/>
                     <br>
-                        <button class="w3-button w3-lime w3-center">Login</button>
+                        
+                        <button runat="server" id="Button1" class="w3-button w3-lime w3-center">Login</button>
+                    <asp:Button ID="Button2" runat="server" class="w3-button w3-lime w3-center" OnClick="Button2_Click" Text="Login" />
                     <br><br>
                 </form>
             </div>
+
         </div>
         <div class="w3-col w3-white w3-container" style="width:40%">
             <p>

@@ -122,9 +122,12 @@
     <Content Include="index.aspx" />
     <Content Include="atoff-login.html" />
     <Content Include="allofficer-select.html" />
+    <Content Include="std-login.aspx" />
     <Content Include="std-select.html" />
     <Content Include="std-login.html" />
     <Content Include="officer-request.html" />
+    <Content Include="test.aspx" />
+    <Content Include="std-in-scholarship.html" />
     <Content Include="work-hr-add.html" />
     <Content Include="std-select-work-place.html" />
     <Content Include="officer-approve.html" />
@@ -156,6 +159,20 @@
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="std-login.aspx.cs">
+      <DependentUpon>std-login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="std-login.aspx.designer.cs">
+      <DependentUpon>std-login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>
