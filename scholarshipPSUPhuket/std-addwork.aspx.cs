@@ -5,21 +5,16 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace scholarshipPSUPhuket
+namespace scholarshipPSUPhuket.aspx
 {
-    public partial class std_in_scholarship : System.Web.UI.Page
+    public partial class std_addwork : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void formsave_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void formprint_Click(object sender, EventArgs e)
+        protected void addworksave_Click(object sender, EventArgs e)
         {
 
         }

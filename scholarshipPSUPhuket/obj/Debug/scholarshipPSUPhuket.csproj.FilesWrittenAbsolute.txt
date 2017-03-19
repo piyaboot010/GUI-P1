@@ -1,0 +1,11 @@
+/Users/piyabootjaroenpong/Documents/Visual Studio 2015/Projects/scholarshipPSUPhuket/GUI-P1/scholarshipPSUPhuket/obj/Debug/.NETFramework,Version=v4.5.2.AssemblyAttribute.cs
+/Users/piyabootjaroenpong/Documents/Visual Studio 2015/Projects/scholarshipPSUPhuket/GUI-P1/scholarshipPSUPhuket/obj/Debug/scholarshipPSUPhuket.dll
+/Users/piyabootjaroenpong/Documents/Visual Studio 2015/Projects/scholarshipPSUPhuket/GUI-P1/scholarshipPSUPhuket/obj/Debug/scholarshipPSUPhuket.pdb
+/Users/piyabootjaroenpong/Documents/Visual Studio 2015/Projects/scholarshipPSUPhuket/GUI-P1/scholarshipPSUPhuket/bin/Microsoft.AI.Agent.Intercept.dll
+/Users/piyabootjaroenpong/Documents/Visual Studio 2015/Projects/scholarshipPSUPhuket/GUI-P1/scholarshipPSUPhuket/bin/Microsoft.AI.DependencyCollector.dll
+/Users/piyabootjaroenpong/Documents/Visual Studio 2015/Projects/scholarshipPSUPhuket/GUI-P1/scholarshipPSUPhuket/bin/Microsoft.AI.PerfCounterCollector.dll
+/Users/piyabootjaroenpong/Documents/Visual Studio 2015/Projects/scholarshipPSUPhuket/GUI-P1/scholarshipPSUPhuket/bin/Microsoft.AI.ServerTelemetryChannel.dll
+/Users/piyabootjaroenpong/Documents/Visual Studio 2015/Projects/scholarshipPSUPhuket/GUI-P1/scholarshipPSUPhuket/bin/Microsoft.AI.Web.dll
+/Users/piyabootjaroenpong/Documents/Visual Studio 2015/Projects/scholarshipPSUPhuket/GUI-P1/scholarshipPSUPhuket/bin/Microsoft.AI.WindowsServer.dll
+/Users/piyabootjaroenpong/Documents/Visual Studio 2015/Projects/scholarshipPSUPhuket/GUI-P1/scholarshipPSUPhuket/bin/Microsoft.ApplicationInsights.dll
+/Users/piyabootjaroenpong/Documents/Visual Studio 2015/Projects/scholarshipPSUPhuket/GUI-P1/scholarshipPSUPhuket/bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll

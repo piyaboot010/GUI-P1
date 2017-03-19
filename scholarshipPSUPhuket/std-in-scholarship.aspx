@@ -8,14 +8,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css"/>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css"/>
 </head>
 <body>
-    <form id="form1" runat="server">
-    <div>
-    
-    </div>
-    </form>
-
+<form id="stdinscholarshipform" runat="server">
     <!-- Header -->
     <div class="w3-row">
         <div class="w3-col w3-white w3-container" style="width:40%">
@@ -23,7 +19,9 @@
                 <div class="w3-col w3-white w3-container" style="width:15%">
 
                     <div class="w3-container w3-white">
-                        <img src="image/logo8.gif" class="w3-round-small" alt="PSU-Logo" width="80" height="120"/>
+                       <a href="/index.aspx">
+                          <img src="image/logo8.gif" class="w3-round-small" alt="PSU-Logo" width="80" height="120"/>
+                       </a>
                     </div>
 
                 </div>
@@ -54,11 +52,11 @@
 
     <!-- Navigation Bar -->
     <div class="w3-bar w3-border w3-lime w3-center">
-        <a style="width:20%" href="#" class="w3-bar-item w3-button w3-mobile">ทุนทั่วไป</a>
-        <a style="width:20%" href="#" class="w3-bar-item w3-button w3-mobile">ทุน กยศ</a>
-        <a style="width:20%" href="#" class="w3-bar-item w3-button w3-mobile">ทุน กรอ</a>
+        <a style="width:20%" href="/std-select.aspx" class="w3-bar-item w3-button w3-mobile">ทุนทั่วไป</a>
+        <a style="width:20%" href="/loan1.aspx" class="w3-bar-item w3-button w3-mobile">ทุน กยศ</a>
+        <a style="width:20%" href="/loan2.aspx" class="w3-bar-item w3-button w3-mobile">ทุน กรอ</a>
         <a style="width:20%" href="#" class="w3-bar-item w3-button w3-mobile">ถาม-ตอบ</a>
-        <a style="width:20%" href="#" class="w3-bar-item w3-button w3-mobile">ติดต่อเรา</a>
+        <a style="width:20%" href="/contactus.aspx" class="w3-bar-item w3-button w3-mobile">ติดต่อเรา</a>
     </div>
 
 
@@ -71,775 +69,416 @@
         </div>
         <div class="w3-col w3-white w3-container" style="width:60%">
             <!-- std-in-scholarship -->
-            <br>
+            <br/>
                 <div class="w3-container w3-lime w3-center">
-                    <h2>แบบฟอร์มขอทุน</h2>
+                    <h4>แบบฟอร์มขอทุน</h4>
                 </div>
             <div class="w3-card-4" style="overflow-y: scroll; height:600px;">
-                <form class="w3-container" action="/action_page.php">
+                    <div class="w3-container">
                     <fieldset>
                         <legend><b>1. ประวัติส่วนตัวผู้สมัครขอรับทุน</b></legend>
                         <br/><b>1.1</b>
                         <p>
-                            <label class="w3-label w3-text-black"><b>ชื่อ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="date" type="text"/>
+                            <asp:Label ID="stdnameL" class="w3-label w3-text-black" runat="server" Text="ชื่อ"></asp:Label>
+                            <asp:TextBox ID="stdnameT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>นามสกุล</b></label>
-                            <input class="w3-input w3-border w3-sand" name="start" type="text"/>
+                            <asp:Label ID="stdlastL" class="w3-label w3-text-black" runat="server" Text="นามสกุล"></asp:Label>
+                            <asp:TextBox ID="stdlastT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>รหัสนักศึกษา</b></label>
-                            <input class="w3-input w3-border w3-sand" name="end" type="text"/>
+                            <asp:Label ID="stdidL" class="w3-label w3-text-black" runat="server" Text="รหัสนักศึกษา"></asp:Label>
+                            <asp:TextBox ID="stdidT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>คณะ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="hrs" type="text"/>
+                            <asp:Label ID="stdnationalidL" class="w3-label w3-text-black" runat="server" Text="เลขประจำตัวประชาชน"></asp:Label>
+                            <asp:TextBox ID="stdnationalidT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>สาขาวิชา</b></label>
-                            <input class="w3-input w3-border w3-sand" name="phone" type="text"/>
+                            <asp:Label ID="stdfacultyL" class="w3-label w3-text-black" runat="server" Text="คณะ"></asp:Label>
+                            <asp:TextBox ID="stdfacultyT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>ชั้นปีที่</b></label>
-                            <input class="w3-input w3-border w3-sand" name="discription" type="text"/>
+                            <asp:Label ID="stdmajorL" class="w3-label w3-text-black" runat="server" Text="สาขาวิชา"></asp:Label>
+                            <asp:TextBox ID="stdmajorT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>เบอร์โทรศัพท์ที่สามารถติดต่อได้</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="stdyearsL" class="w3-label w3-text-black" runat="server" Text="ชั้นปีที่"></asp:Label>
+                            <asp:TextBox ID="stdyearsT" class="w3-input w3-border w3-sand" runat="server" required="" type="number"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>E-mail</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="stdphoneL" class="w3-label w3-text-black" runat="server" Text="เบอร์โทรศัพท์ที่สามารถติดต่อได้"></asp:Label>
+                            <asp:TextBox ID="stdphoneT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>อาจารย์ที่ปรึกษา</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="stdmailL" class="w3-label w3-text-black" runat="server" Text="E-mail"></asp:Label>
+                            <asp:TextBox ID="stdmailT" class="w3-input w3-border w3-sand" runat="server" required="" type="email"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>เบอร์โทรศัพท์</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="stdadvisorL" class="w3-label w3-text-black" runat="server" Text="อาจารย์ที่ปรึกษา"></asp:Label>
+                            <asp:TextBox ID="stdadvisorT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>ผลการเรียนภาคการศึกษาล่าสุด</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="stdadvisorphoneL" class="w3-label w3-text-black" runat="server" Text="เบอร์โทรศัพท์"></asp:Label>
+                            <asp:TextBox ID="stdadvisorphoneT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>เกรดเฉลี่ยสะสม</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="stdlastgradeL" class="w3-label w3-text-black" runat="server" Text="ผลการเรียนภาคการศึกษาล่าสุด"></asp:Label>
+                            <asp:TextBox ID="stdlastgradeT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>วัน เดือน ปี ที่เกิด</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="stdtotalgradeL" class="w3-label w3-text-black" runat="server" Text="เกรดเฉลี่ยสะสม"></asp:Label>
+                            <asp:TextBox ID="stdtotalgradeT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>สัญชาติ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="stddirthdayL" class="w3-label w3-text-black" runat="server" Text="วัน เดือน ปี ที่เกิด"></asp:Label>
+                            <asp:TextBox ID="stddirthdayT" class="w3-input w3-border w3-sand" runat="server" required="" type="date"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>นับถือศาสนา</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="stdcountryL" class="w3-label w3-text-black" runat="server" Text="สัญชาติ"></asp:Label>
+                            <asp:TextBox ID="stdcountryT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>ภูมิลำเนาเดิม บ้านเลขที่</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="stdreligonL" class="w3-label w3-text-black" runat="server" Text="นับถือศาสนา"></asp:Label>
+                            <asp:TextBox ID="stdreligonT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>หมู่ที่</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="stdhouseaddressL" class="w3-label w3-text-black" runat="server" Text="ภูมิลำเนาเดิม บ้านเลขที่"></asp:Label>
+                            <asp:TextBox ID="stdhouseaddressT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>ซอย</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="stdhousevillageL" class="w3-label w3-text-black" runat="server" Text="หมู่ที่"></asp:Label>
+                            <asp:TextBox ID="stdhousevillageT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>ถนน</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="stdhousesubroadL" class="w3-label w3-text-black" runat="server" Text="ซอย"></asp:Label>
+                            <asp:TextBox ID="stdhousesubroadT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>แขวง/ตำบล</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="stdhouseroadL" class="w3-label w3-text-black" runat="server" Text="ถนน"></asp:Label>
+                            <asp:TextBox ID="stdhouseroadT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>เขต/อำเภอ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="stdsubdistrictL" class="w3-label w3-text-black" runat="server" Text="แขวง/ตำบล"></asp:Label>
+                            <asp:TextBox ID="stdsubdistrictT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>จังหวัด</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="stddistrictL" class="w3-label w3-text-black" runat="server" Text="เขต/อำเภอ"></asp:Label>
+                            <asp:TextBox ID="stddistrictT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>รหัสไปรษณีย์</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="stdprovideL" class="w3-label w3-text-black" runat="server" Text="จังหวัด"></asp:Label>
+                            <asp:TextBox ID="stdprovideT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>เบอร์โทรศัพท์</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="stdpostL" class="w3-label w3-text-black" runat="server" Text="รหัสไปรษณีย์"></asp:Label>
+                            <asp:TextBox ID="stdpostT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>โทรศัพท์</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="stdhousephoneL" class="w3-label w3-text-black" runat="server" Text="เบอร์โทรศัพท์"></asp:Label>
+                            <asp:TextBox ID="stdhousephoneT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
-                        <br><b>1.2</b>
+                        <br/><b>1.2</b>
                         <p>
-                            <label class="w3-label w3-text-black"><b>ที่อยู่ปัจุบัน หอพัก</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>ห้องพักหมายเลข</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="stdcurrentaddressL" class="w3-label w3-text-black" runat="server" Text="ที่อยู่ปัจุบัน หอพัก"></asp:Label>
+                            <asp:TextBox ID="stdcurrentaddressT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>บ้านเลขที่</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="stdroomnumberL" class="w3-label w3-text-black" runat="server" Text="ห้องพักหมายเลข"></asp:Label>
+                            <asp:TextBox ID="stdroomnumberT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>หมูที่</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="stdcurrentnumberL" class="w3-label w3-text-black" runat="server" Text="บ้านเลขที่"></asp:Label>
+                            <asp:TextBox ID="stdcurrentnumberT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>เบอร์โทรศัพท์ที่สามารถติดต่อได้</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="stdcurrentvillageL" class="w3-label w3-text-black" runat="server" Text="หมูที่"></asp:Label>
+                            <asp:TextBox ID="stdcurrentvillageT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>ซอย</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="stdcurrentphoneL" class="w3-label w3-text-black" runat="server" Text="เบอร์โทรศัพท์ที่สามารถติดต่อได้"></asp:Label>
+                            <asp:TextBox ID="stdcurrentphoneT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>ถนน</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="stdcurrentsubroadL" class="w3-label w3-text-black" runat="server" Text="ซอย"></asp:Label>
+                            <asp:TextBox ID="stdcurrentsubroadT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>แขวง/ตำบล</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="stdcurrentroadL" class="w3-label w3-text-black" runat="server" Text="ถนน"></asp:Label>
+                            <asp:TextBox ID="stdcurrentroadT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>เขต/อำเภอ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="stdcurrentsubdistricL" class="w3-label w3-text-black" runat="server" Text="แขวง/ตำบล"></asp:Label>
+                            <asp:TextBox ID="stdcurrentsubdistricT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>จังหวัด</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="stdcurrentdistrictL" class="w3-label w3-text-black" runat="server" Text="เขต/อำเภอ"></asp:Label>
+                            <asp:TextBox ID="stdcurrentdistrictT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>รหัสไปรษณีย์</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="stdcurrentprovideL" class="w3-label w3-text-black" runat="server" Text="จังหวัด"></asp:Label>
+                            <asp:TextBox ID="stdcurrentprovideT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>เบอร์โทรศัพท์</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <br><b>1.3</b>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>ผู้สมัครเป็นบุตรคนที่</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="stdcurrentpostL" class="w3-label w3-text-black" runat="server" Text="รหัสไปรษณีย์"></asp:Label>
+                            <asp:TextBox ID="stdcurrentpostT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>จำนวนพี่น้องที่ยังมีชีวิตอยู่ (รวมตัวเองด้วย)</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="stdcurrentphonenumberL" class="w3-label w3-text-black" runat="server" Text="เบอร์โทรศัพท์"></asp:Label>
+                            <asp:TextBox ID="stdcurrentphonenumberT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
+                        </p>
+                        <br/><b>1.3</b>
+                        <p>
+                            <asp:Label ID="stdorderL" class="w3-label w3-text-black" runat="server" Text="ผู้สมัครเป็นบุตรคนที่"></asp:Label>
+                            <asp:TextBox ID="stdorderT" class="w3-input w3-border w3-sand" runat="server" required="" type="number"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>ชาย</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="stdchildmemberL" class="w3-label w3-text-black" runat="server" Text="จำนวนพี่น้องที่ยังมีชีวิตอยู่ (รวมตัวเองด้วย)"></asp:Label>
+                            <asp:TextBox ID="stdchildmemberT" class="w3-input w3-border w3-sand" runat="server" required="" type="number"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>หญิง</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="menL" class="w3-label w3-text-black" runat="server" Text="ชาย"></asp:Label>
+                            <asp:TextBox ID="menT" class="w3-input w3-border w3-sand" runat="server" required="" type="number"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>เบอร์โทรศัพท์</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="femalL" class="w3-label w3-text-black" runat="server" Text="หญิง"></asp:Label>
+                            <asp:TextBox ID="femalT" class="w3-input w3-border w3-sand" runat="server" required="" type="number"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>จำนวนพี่น้องที่กำลังศึกษาอยู่ (รวมตัวเองด้วย)</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="stdsumL" class="w3-label w3-text-black" runat="server" Text="จำนวนพี่น้องที่กำลังศึกษาอยู่ (รวมตัวเองด้วย)"></asp:Label>
+                            <asp:TextBox ID="stdsumT" class="w3-input w3-border w3-sand" runat="server" required="" type="number"></asp:TextBox>
                         </p>
                         <br/><b>โปรดระบุเกี่ยวกับพี่น้องของท่าน รวมตัวท่านเองตามลาดับ</b>
                         <br/><b>ลำดับที่1</b>
                         <p>
-                            <label class="w3-label w3-text-black"><b>ชื่อ-สกุล</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="firstnameL" class="w3-label w3-text-black" runat="server" Text="ชื่อ-สกุล"></asp:Label>
+                            <asp:TextBox ID="firstnameT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>อายุ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="firstageL" class="w3-label w3-text-black" runat="server" Text="อายุ"></asp:Label>
+                            <asp:TextBox ID="firstageT" class="w3-input w3-border w3-sand" runat="server" required="" type="number"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>ระดับการศึกษาที่สาเร็จหรือกาลังศึกษาอยู่ในระดับ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="firsteduL" class="w3-label w3-text-black" runat="server" Text="ระดับการศึกษาที่สาเร็จหรือกาลังศึกษาอยู่ในระดับ"></asp:Label>
+                            <asp:TextBox ID="firsteduT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>อาชีพ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="firstjobL" class="w3-label w3-text-black" runat="server" Text="อาชีพ"></asp:Label>
+                            <asp:TextBox ID="firstjobT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>สถานที่ทำงานหรือศึกษาที่</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="firstjobplaceL" class="w3-label w3-text-black" runat="server" Text="สถานที่ทำงานหรือศึกษาที่"></asp:Label>
+                            <asp:TextBox ID="firstjobplaceT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>รายได้/เดือน</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="firstsalaryL" class="w3-label w3-text-black" runat="server" Text="รายได้/เดือน"></asp:Label>
+                            <asp:TextBox ID="firstsalaryT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <br/><b>ลำดับที่2</b>
                         <p>
-                            <label class="w3-label w3-text-black"><b>ชื่อ-สกุล</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="secnameL" class="w3-label w3-text-black" runat="server" Text="ชื่อ-สกุล"></asp:Label>
+                            <asp:TextBox ID="secnameT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>อายุ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="secageL" class="w3-label w3-text-black" runat="server" Text="อายุ"></asp:Label>
+                            <asp:TextBox ID="secageT" class="w3-input w3-border w3-sand" runat="server" required="" type="number"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>ระดับการศึกษาที่สาเร็จหรือกาลังศึกษาอยู่ในระดับ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="seceduL" class="w3-label w3-text-black" runat="server" Text="ระดับการศึกษาที่สาเร็จหรือกาลังศึกษาอยู่ในระดับ"></asp:Label>
+                            <asp:TextBox ID="seceduT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>อาชีพ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="secjobL" class="w3-label w3-text-black" runat="server" Text="อาชีพ"></asp:Label>
+                            <asp:TextBox ID="secjobT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>สถานที่ทำงานหรือศึกษาที่</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="secjobplaceL" class="w3-label w3-text-black" runat="server" Text="สถานที่ทำงานหรือศึกษาที่"></asp:Label>
+                            <asp:TextBox ID="secjobplaceT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>รายได้/เดือน</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="secsalaryL" class="w3-label w3-text-black" runat="server" Text="รายได้/เดือน"></asp:Label>
+                            <asp:TextBox ID="secsalaryT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
-                        <br><b>ลำดับที่3</b>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>ชื่อ-สกุล</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>อายุ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                        <br/><b>ลำดับที่3</b>
+                         <p>
+                            <asp:Label ID="tirnameL" class="w3-label w3-text-black" runat="server" Text="ชื่อ-สกุล"></asp:Label>
+                            <asp:TextBox ID="tirnameT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>ระดับการศึกษาที่สาเร็จหรือกาลังศึกษาอยู่ในระดับ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="tirageL" class="w3-label w3-text-black" runat="server" Text="อายุ"></asp:Label>
+                            <asp:TextBox ID="tirageT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>อาชีพ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="tireduL" class="w3-label w3-text-black" runat="server" Text="ระดับการศึกษาที่สาเร็จหรือกาลังศึกษาอยู่ในระดับ"></asp:Label>
+                            <asp:TextBox ID="tireduT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>สถานที่ทำงานหรือศึกษาที่</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="tirjobL" class="w3-label w3-text-black" runat="server" Text="อาชีพ"></asp:Label>
+                            <asp:TextBox ID="tirjobT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>รายได้/เดือน</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                    </fieldset>
-                    <fieldset>
-                        <legend><b>2. ประวัติการศึกษาและการรับทุนการศึกษา</b></legend>
-                        <br/><b>2.1 รายละเอียดประวัติการศึกษา</b>
-                        <br/><b>ระดับการศึกษา ป.6</b>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>ปีการศึกษา</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="tirjobplaceL" class="w3-label w3-text-black" runat="server" Text="สถานที่ทำงานหรือศึกษาที่"></asp:Label>
+                            <asp:TextBox ID="tirjobplaceT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>คะแนนเฉลี่ย</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>ชื่อ-สกุล อาจารย์ที่ปรึกษา</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>สาขาวิชา</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <br/><b>ระดับการศึกษา ม.3</b>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>ปีการศึกษา</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>คะแนนเฉลี่ย</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>ชื่อ-สกุล อาจารย์ที่ปรึกษา</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>สาขาวิชา</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <br><b>ระดับการศึกษา ม.6</b>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>ปีการศึกษา</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>คะแนนเฉลี่ย</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>ชื่อ-สกุล อาจารย์ที่ปรึกษา</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>สาขาวิชา</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <br/><b>อุดมศึกษาปีที่ 1</b>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>ปีการศึกษา</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>คะแนนเฉลี่ย</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>ชื่อ-สกุล อาจารย์ที่ปรึกษา</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>สาขาวิชา</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <br/><b>อุดมศึกษาปีที่ 2</b>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>ปีการศึกษา</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>คะแนนเฉลี่ย</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>ชื่อ-สกุล อาจารย์ที่ปรึกษา</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>สาขาวิชา</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <br/><b>อุดมศึกษาปีที่ 3</b>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>ปีการศึกษา</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>คะแนนเฉลี่ย</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>ชื่อ-สกุล อาจารย์ที่ปรึกษา</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>สาขาวิชา</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <br><b>อุดมศึกษาปีที่ 4</b>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>ปีการศึกษา</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>คะแนนเฉลี่ย</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>ชื่อ-สกุล อาจารย์ที่ปรึกษา</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>สาขาวิชา</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <br/><b>2.2 รายละเอียดประวัติการรับทุนการศึกษา</b>
-                        <br/><b>ลำดับที่ 1</b>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>ปีการศึกษา</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>ประเภททุน</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>ชื่อทุนการศึกษา</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>จำนวนเงิน</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <br><b>ลำดับที่ 2</b>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>ปีการศึกษา</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>ประเภททุน</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>ชื่อทุนการศึกษา</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>จำนวนเงิน</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <br/><b>ลำดับที่ 3</b>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>ปีการศึกษา</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>ประเภททุน</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>ชื่อทุนการศึกษา</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>จำนวนเงิน</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
+                            <asp:Label ID="tirsalaryL" class="w3-label w3-text-black" runat="server" Text="รายได้/เดือน"></asp:Label>
+                            <asp:TextBox ID="tirsalaryT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                     </fieldset>
                     <fieldset>
                         <legend><b>3. ครอบครัว / ผู้อุปการะ</b></legend>
                         <br/><b>3.1</b>
                         <p>
-                            <label class="w3-label w3-text-black"><b>ชื่อ-สกุล บิดา</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
+                            <asp:Label ID="dadnameL" class="w3-label w3-text-black" runat="server" Text="ชื่อ-สกุล บิดา"></asp:Label>
+                            <asp:TextBox ID="dadnameT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <input type="radio" name="status" value="ยังมีชีวิตอยู่" checked=""/><b> ยังมีชีวิตอยู่</b>
-                            <input type="radio" name="status" value="ถึงแก่กรรม"/><b> ถึงแก่กรรม</b>
+                            <input id="dalive" type="radio" name="status" value="ยังมีชีวิตอยู่" checked=""/><b> ยังมีชีวิตอยู่</b>
+                            <input id="ddie" type="radio" name="status" value="ถึงแก่กรรม"/><b> ถึงแก่กรรม</b>
+
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>อายุ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
+                            <asp:Label ID="dadageL" class="w3-label w3-text-black" runat="server" Text="อายุ"></asp:Label>
+                            <asp:TextBox ID="dadageT" class="w3-input w3-border w3-sand" runat="server" required="" type="number"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>วุฒิการศึกษาสูงสุด</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
+                            <asp:Label ID="dadeduL" class="w3-label w3-text-black" runat="server" Text="วุฒิการศึกษาสูงสุด"></asp:Label>
+                            <asp:TextBox ID="dadeduT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>อาชีพของบิดา(โปรดระบุรายละเอียดลักษณะอาชีพ)</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
+                            <asp:Label ID="dadjobL" class="w3-label w3-text-black" runat="server" Text="อาชีพของบิดา(โปรดระบุรายละเอียดลักษณะอาชีพ)"></asp:Label>
+                            <asp:TextBox ID="dadjobT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>สถานที่ทำงานของบิดา</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
+                            <asp:Label ID="dadjobplaceL" class="w3-label w3-text-black" runat="server" Text="สถานที่ทำงานของบิดา"></asp:Label>
+                            <asp:TextBox ID="dadjobplaceT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>โทรศัพท์</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
+                            <asp:Label ID="dadphoneL" class="w3-label w3-text-black" runat="server" Text="โทรศัพท์"></asp:Label>
+                            <asp:TextBox ID="dadphoneT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>โทรศัพท์มือถือ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
+                            <asp:Label ID="dadmobileL" class="w3-label w3-text-black" runat="server" Text="โทรศัพท์มือถือ"></asp:Label>
+                            <asp:TextBox ID="dadmobileT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>รายได้ต่อเดือน(ยังไม่หักค่าใช้จ่าย)</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
+                            <asp:Label ID="dadsalaryL" class="w3-label w3-text-black" runat="server" Text="รายได้ต่อเดือน(ยังไม่หักค่าใช้จ่าย)"></asp:Label>
+                            <asp:TextBox ID="dadsalaryT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>รวมรายได้ประมาณปีละ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
+                            <asp:Label ID="dadtotalsalaryL" class="w3-label w3-text-black" runat="server" Text="รวมรายได้ประมาณปีละ"></asp:Label>
+                            <asp:TextBox ID="dadtotalsalaryT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>รายได้พิเศษต่อเดือน(ถ้ามี)</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
+                            <asp:Label ID="dadextrasalaryL" class="w3-label w3-text-black" runat="server" Text="รายได้พิเศษต่อเดือน(ถ้ามี)"></asp:Label>
+                            <asp:TextBox ID="dadextrasalaryT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>รวมรายได้ทั้งหมดประมาณปีละ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
+                            <asp:Label ID="dadallyearsalaryL" class="w3-label w3-text-black" runat="server" Text="รวมรายได้ทั้งหมดประมาณปีละ"></asp:Label>
+                            <asp:TextBox ID="dadallyearsalaryT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <br/><b>3.2</b>
                         <p>
-                            <label class="w3-label w3-text-black"><b>ชื่อ-สกุล มารดา</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
+                            <asp:Label ID="momnameL" class="w3-label w3-text-black" runat="server" Text="ชื่อ-สกุล มารดา"></asp:Label>
+                            <asp:TextBox ID="momnameT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <input type="radio" name="status2" value="ยังมีชีวิตอยู่" checked=""/><b> ยังมีชีวิตอยู่</b>
-                            <input type="radio" name="status2" value="ถึงแก่กรรม"/><b> ถึงแก่กรรม</b>
+                            <input id="malive" type="radio" name="status" value="ยังมีชีวิตอยู่" checked=""/><b> ยังมีชีวิตอยู่</b>
+                            <input id="mdie" type="radio" name="status" value="ถึงแก่กรรม"/><b> ถึงแก่กรรม</b>
+
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>อายุ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
+                            <asp:Label ID="momageL" class="w3-label w3-text-black" runat="server" Text="อายุ"></asp:Label>
+                            <asp:TextBox ID="momageT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>วุฒิการศึกษาสูงสุด</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
+                            <asp:Label ID="momeduL" class="w3-label w3-text-black" runat="server" Text="วุฒิการศึกษาสูงสุด"></asp:Label>
+                            <asp:TextBox ID="momeduT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>อาชีพของบิดา(โปรดระบุรายละเอียดลักษณะอาชีพ)</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
+                            <asp:Label ID="momjobL" class="w3-label w3-text-black" runat="server" Text="อาชีพของมารดา(โปรดระบุรายละเอียดลักษณะอาชีพ)"></asp:Label>
+                            <asp:TextBox ID="momjobT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>สถานที่ทำงานของบิดา</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
+                            <asp:Label ID="momjobplaceL" class="w3-label w3-text-black" runat="server" Text="สถานที่ทำงานของมารดา"></asp:Label>
+                            <asp:TextBox ID="momjobplaceT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>โทรศัพท์</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
+                            <asp:Label ID="momphoneL" class="w3-label w3-text-black" runat="server" Text="โทรศัพท์"></asp:Label>
+                            <asp:TextBox ID="momphoneT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>โทรศัพท์มือถือ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
+                            <asp:Label ID="mommobileL" class="w3-label w3-text-black" runat="server" Text="โทรศัพท์มือถือ"></asp:Label>
+                            <asp:TextBox ID="mommobileT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>รายได้ต่อเดือน(ยังไม่หักค่าใช้จ่าย)</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
+                            <asp:Label ID="momsalaryL" class="w3-label w3-text-black" runat="server" Text="รายได้ต่อเดือน(ยังไม่หักค่าใช้จ่าย)"></asp:Label>
+                            <asp:TextBox ID="momsalaryT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>รวมรายได้ประมาณปีละ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
+                            <asp:Label ID="momtotalsalaryL" class="w3-label w3-text-black" runat="server" Text="รวมรายได้ประมาณปีละ"></asp:Label>
+                            <asp:TextBox ID="momtotalsalaryT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>รายได้พิเศษต่อเดือน(ถ้ามี)</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
+                            <asp:Label ID="momextrasalaryL" class="w3-label w3-text-black" runat="server" Text="รายได้พิเศษต่อเดือน(ถ้ามี)"></asp:Label>
+                            <asp:TextBox ID="momextrasalaryT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>รวมรายได้ทั้งหมดประมาณปีละ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
+                            <asp:Label ID="momallyearsalaryL" class="w3-label w3-text-black" runat="server" Text="รวมรายได้ทั้งหมดประมาณปีละ"></asp:Label>
+                            <asp:TextBox ID="momallyearsalaryT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
-                        <br><b>3.3</b>
+                        <br/><b>3.3</b>
                         <p>
-                            <label class="w3-label w3-text-black"><b>ผู้อุปการะ (กรณีไม่มีบิดา / มารดา)</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>อายุ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
+                            <asp:Label ID="othnameL" class="w3-label w3-text-black" runat="server" Text="ผู้อุปการะ (กรณีไม่มีบิดา / มารดา)"></asp:Label>
+                            <asp:TextBox ID="othnameT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>วุฒิการศึกษาสูงสุด</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
+                            <asp:Label ID="othageL" class="w3-label w3-text-black" runat="server" Text="อายุ"></asp:Label>
+                            <asp:TextBox ID="othageT" class="w3-input w3-border w3-sand" runat="server" required="" type="number"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>อาชีพของบิดา(โปรดระบุรายละเอียดลักษณะอาชีพ)</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
+                            <asp:Label ID="othextrasalarayyearL" class="w3-label w3-text-black" runat="server" Text="รายได้พิเศษต่อปี"></asp:Label>
+                            <asp:TextBox ID="othextrasalarayyearT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>สถานที่ทำงานของบิดา</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
+                            <asp:Label ID="othjobL" class="w3-label w3-text-black" runat="server" Text="อาชีพของอุปาระ"></asp:Label>
+                            <asp:TextBox ID="othjobT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>โทรศัพท์</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
+                            <asp:Label ID="othjobplaceL" class="w3-label w3-text-black" runat="server" Text="สถานที่ทำงานของมารดา"></asp:Label>
+                            <asp:TextBox ID="othjobplaceT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>โทรศัพท์มือถือ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
+                            <asp:Label ID="othphoneL" class="w3-label w3-text-black" runat="server" Text="โทรศัพท์"></asp:Label>
+                            <asp:TextBox ID="othphoneT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>รายได้ต่อเดือน(ยังไม่หักค่าใช้จ่าย)</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
+                            <asp:Label ID="othmobileL" class="w3-label w3-text-black" runat="server" Text="โทรศัพท์มือถือ"></asp:Label>
+                            <asp:TextBox ID="othmobileT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>รวมรายได้ประมาณปีละ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
+                            <asp:Label ID="othsalaryL" class="w3-label w3-text-black" runat="server" Text="รายได้ต่อเดือน(ยังไม่หักค่าใช้จ่าย)"></asp:Label>
+                            <asp:TextBox ID="othsalaryT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>รายได้พิเศษต่อเดือน(ถ้ามี)</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
+                            <asp:Label ID="othtotalsalaryL" class="w3-label w3-text-black" runat="server" Text="รวมรายได้ประมาณปีละ"></asp:Label>
+                            <asp:TextBox ID="othtotalsalaryT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>รวมรายได้ทั้งหมดประมาณปีละ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
-                        </p>
-                        <br/><b>3.4 สถานภาพครอบครัว</b>
-                        <p>
-                            <input type="radio" name="status3" value="บิดา-มารดา อยู่ร่วมกัน" checked=""/><b> บิดา-มารดา อยู่ร่วมกัน</b><br>
-                            <input type="radio" name="status3" value="แยกกันอยู่ชั่วคราว"/><b> แยกกันอยู่ชั่วคราว</b>
-                            <input type="checkbox" name="status3-1" value="บิดาส่งเสีย"/><b> บิดาส่งเสีย</b>
-                            <input type="checkbox" name="status3-1" value="มารดาส่งเสีย"/><b> มารดาส่งเสีย</b>
-                            <input type="checkbox" name="status3-1" value="บิดา/มารดาไม่ได้ส่งเสีย"/><b> บิดา/มารดาไม่ได้ส่งเสีย</b><br>
-                            <input type="radio" name="status3" value="หย่าร้าง"/><b> หย่าร้าง</b>
-                            <input type="checkbox" name="status3-1" value="บิดาส่งเสีย"/><b> บิดาส่งเสีย</b>
-                            <input type="checkbox" name="status3-1" value="มารดาส่งเสีย"/><b> มารดาส่งเสีย</b>
-                            <input type="checkbox" name="status3-1" value="บิดา/มารดาไม่ได้ส่งเสีย"/><b> บิดา/มารดาไม่ได้ส่งเสีย</b><br>
-                            <input type="radio" name="status3" value="อื่นๆ"/><b> อื่น ๆ (โปรดระบุ)</b>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
-                        </p>
-                        <br/><b>3.5 กรณีบิดา มารดามีครอบครัวใหม</b>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>สามีใหม่ / ภรรยาใหม่ ชื่อ / สกุล</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
+                            <asp:Label ID="othextrasalaryL" class="w3-label w3-text-black" runat="server" Text="รายได้พิเศษต่อเดือน(ถ้ามี)"></asp:Label>
+                            <asp:TextBox ID="othextrasalaryT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
                         <p>
-                            <label class="w3-label w3-text-black"><b>อายุ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
+                            <asp:Label ID="othallyearsalaryL" class="w3-label w3-text-black" runat="server" Text="รวมรายได้ทั้งหมดประมาณปีละ"></asp:Label>
+                            <asp:TextBox ID="othallyearsalaryT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
                         </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>อาชีพ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>รายได้ประมาณปีละ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>สถานที่ติดต่อ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>โทรศัพท์</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>โทรศัพท์มือถือ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
-                        </p>
-                        <br/><b>3.6</b>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>บิดา-มารดา มีภาระต้องอุปการะเลี้ยงดูผู้อื่น (นอกเหนือจากบุตร-ธิดา)</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>บุคคลอื่นที่ต้องอุปการะเลี้ยงดูคือ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>มีภาระหนี้สินในปัจจุบันเป็นจานวน</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>การผ่อนชาระเดือนละ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>เนื่องจาก</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>ปัจจุบันนักศึกษาอาศัยอยู่กับ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text" required=""/>
-                        </p>
-                    </fieldset>
-                    <fieldset>
-                        <legend><b>4.รายรับ/รายจ่ายในภาคการศึกษาที่ผ่านมา</b></legend>
-                        <br/><b>รายรับ</b>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>รับเงินค่าอาหาร</b></label>
-                            <input type="radio" name="status4-1" value="วันละ"/><b> วันละ</b>
-                            <input type="radio" name="status4-1" value="สัปดาห์ละ"/><b> สัปดาห์ละ</b>
-                            <input type="radio" name="status4-1" value="เดือนละ"/><b> เดือนละ</b><br/>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>จาก</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>รับเดือนละ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>ทางานหารายได้พิเศษคือ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>รายได้</b></label>
-                            <input type="radio" name="status4-1" value="สัปดาห์ละ"><b> สัปดาห์ละ</b>
-                            <input type="radio" name="status4-1" value="เดือนละ"><b> เดือนละ</b><br/>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>รวมรายได้ทั้งสิ้นประมาณ</b></label>
-                            <input type="radio" name="status4-1" value="วันละ"><b> วันละ</b>
-                            <input type="radio" name="status4-1" value="สัปดาห์ละ"><b> สัปดาห์ละ</b>
-                            <input type="radio" name="status4-1" value="เดือนละ"><b> เดือนละ</b><br>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text">
-                        </p>
-                        <br><b>รายรับ</b>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>รับประทานอาหารเช้า</b></label>
-                            <input type="radio" name="status4-1" value="ที่บ้าน"/><b> ที่บ้าน</b>
-                            <input type="radio" name="status4-1" value="ที่สถานศึกษา"/><b> ที่สถานศึกษา</b>
-                            <input type="radio" name="status4-1" value="ที่อื่น"/><b> ที่อื่น เดือนละ</b><br/>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>รับประทานอาหารกลางวัน</b></label>
-                            <input type="radio" name="status4-1" value="ที่บ้าน"/><b> ที่บ้าน</b>
-                            <input type="radio" name="status4-1" value="ที่สถานศึกษา"/><b> ที่สถานศึกษา</b>
-                            <input type="radio" name="status4-1" value="ที่อื่น"/><b> ที่อื่น เดือนละ</b><br/>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>รับประทานอาหารเย็น</b></label>
-                            <input type="radio" name="status4-1" value="ที่บ้าน"/><b> ที่บ้าน</b>
-                            <input type="radio" name="status4-1" value="ที่สถานศึกษา"/><b> ที่สถานศึกษา</b>
-                            <input type="radio" name="status4-1" value="ที่อื่น"/><b> ที่อื่น เดือนละ</b><br/>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>ค่าใช้จ่ายในการเดินทางวันละ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>ค่าใช้จ่ายในการศึกษาวันละ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>รวมรายจ่ายทั้งสิ้นประมาณ</b></label>
-                            <input type="radio" name="status4-1" value="ที่บ้าน"/><b> สัปดาห์ละ</b>
-                            <input type="radio" name="status4-1" value="ที่อื่น"/><b> เดือนละ</b><br/>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                    </fieldset>
-                    <fieldset>
-                        <legend><b>5. สุขภาพ</b></legend>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>ข้าพเจ้ามีโรคประจาตัวคือ</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>ข้าพเจ้าแพ้ยา</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>อื่น ๆ (ถ้ามี)</b></label>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                    </fieldset>
-                    <fieldset>
-                        <legend><b>6. การเข้าร่วมกิจกรรมต่างๆ ในระดับมหาวิทยาลัย</b></legend>
-                        <b>ภายในมหาวิทยาลัย</b>
-                        <p>
-                            <input type="checkbox" name="status4-1" value="ที่อื่น"/><b> กิจกรรมของมหาวิทยาลัย</b><br/>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <input type="checkbox" name="status4-1" value="ที่อื่น"/><b> กิจกรรมของคณะ</b><br/>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                        <p>
-                            <b>ภายนอกมหาวิทยาลัย</b>
-                            <input class="w3-input w3-border w3-sand" name="officer" type="text"/>
-                        </p>
-                    </fieldset>
-                    <fieldset>
-                        <legend><b>7. ความจาเป็นในการขอรับทุน</b></legend>
-                        <b>(พร้อมทั้งให้เขียนสรุปข้อมูลเกี่ยวกับการดาเนินชีวิตของผู้ขอรับทุนซึ่งแสดงถึงสภาวะความยากลาบากของครอบครัว ตลอดจนปัญหาต่างๆที่มี พร้อมทั้งความคาดหวังในการศึกษาหรือการประกอบอาชีพในอนาคต)</b>
-                        <p>
-                            <label class="w3-label w3-text-black"><b>เหตุผลที่ต้องสมัครขอรับทุน</b></label><br>
-                            <textarea class="w3-input w3-border w3-sand" name="message" rows="30" cols="132"></textarea>
-                        </p>
-                        <b>
-                            ข้าพเจ้าขอรับรองว่าข้อความที่กรอกไว้ในใบสมัครและหลักฐานเอกสารประกอบการสมัครนี้เป็นความจริงทุกประการ โดยยินยอมให้มีการตรวจสอบข้อเท็จจริงเกี่ยวกับสภาพของครอบครัวและตัวข้าพเจ้า
-                            หากตรวจพบว่าข้อมูลบางส่วนหรือทั้งหมดเป็นเท็จ ข้าพเจ้ายินยอมชดใช้เงินทุนการศึกษาที่ได้รับคืนทั้งหมดและยินยอมให้พิจารณาลงโทษตามระเบียบของมหาวิทยาลัยว่าด้วยวินัยนักศึกกษา
-                        </b>
+                        
                     </fieldset>
                     <p>
-                        <button class="w3-btn w3-lime">บันทึก</button>
-                        <button class="w3-btn w3-lime">พิมพ์</button>
+                        <asp:Button ID="formsave" class="w3-btn w3-lime" runat="server" Text="บันทึก" OnClick="formsave_Click" />
+                        <asp:Button ID="formprint" class="w3-btn w3-lime" runat="server" Text="พิมพ์" OnClick="formprint_Click" />
                     </p>
-                </form>
+                    </div>
             </div>
         </div>
         <div class="w3-col w3-white w3-container" style="width:20%">
@@ -848,7 +487,7 @@
 
         </div>
     </div>
-    <br>
+    <br/>
 
     <!--contact info  -->
     <div class="w3-row w3-border">
@@ -856,7 +495,7 @@
             <div class="w3-row">
                 <div class="w3-col w3-lime w3-container" style="width:10%">
                     <br/><br/>
-                    <img img src="image/building.png" class="w3-round-small" alt="address" width="40" height="40"/>
+                    <img src="image/building.png" class="w3-round-small" alt="address" width="40" height="40"/>
                 </div>
                 <div class="w3-col w3-lime w3-container" style="width:90%">
                     <p>กองกิจการนักศึกษา</p>
@@ -870,9 +509,9 @@
             <div class="w3-row">
                 <div class="w3-col w3-lime w3-container" style="width:10%">
                     <br/>
-                    <img img src="image/call-center.png" class="w3-round-small" alt="address" width="40" height="40"/>
+                    <img src="image/call-center.png" class="w3-round-small" alt="address" width="40" height="40"/>
                     <br/><br/>
-                    <img img src="image/envelope.png" class="w3-round-small" alt="address" width="40" height="40"/>
+                    <img src="image/envelope.png" class="w3-round-small" alt="address" width="40" height="40"/>
                 </div>
                 <div class="w3-col w3-lime w3-container" style="width:90%">
                     <p>กยศ. Call Center</p>
@@ -886,7 +525,7 @@
             <div class="w3-row">
                 <div class="w3-col w3-lime w3-container" style="width:10%">
                     <br/><br/>
-                    <img img src="image/clock.png" class="w3-round-small" alt="address" width="40" height="40"/>
+                    <img src="image/clock.png" class="w3-round-small" alt="address" width="40" height="40"/>
                 </div>
                 <div class="w3-col w3-lime w3-container" style="width:90%">
                     <p>เวลาทำการ</p>
@@ -904,11 +543,13 @@
 
         </div>
         <div class="w3-third w3-container w3-white w3-center">
-            <h5>@Copyright PSU-Phuket</h5>
+            <h6>@Copyright PSU-Phuket</h6>
+            <asp:Button ID="logoutBTN" runat="server" Text="Logout" />
         </div>
         <div class="w3-third w3-container w3-white">
 
         </div>
     </div>
+</form>
 </body>
 </html>

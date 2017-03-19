@@ -1,17 +1,17 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="std-login.aspx.cs" Inherits="scholarshipPSUPhuket.std_login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="loan1.aspx.cs" Inherits="scholarshipPSUPhuket.loan1" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 5.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>นักศึกษาเข้าสู่ระบบ</title>
+    <title>กยศ.</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css"/>
 </head>
 <body>
-    <form id="stdloginform" runat="server">
-    <!-- Header -->
+    <form id="loan1form" runat="server">
+   <!-- Header -->
     <div class="w3-row">
         <div class="w3-col w3-white w3-container" style="width:40%">
             <div class="w3-row">
@@ -19,7 +19,7 @@
 
                     <div class="w3-container w3-white">
                         <a href="/index.aspx">
-                          <img src="image/logo8.gif" class="w3-round-small" alt="PSU-Logo" width="80" height="120"/>
+                           <img src="image/logo8.gif" class="w3-round-small" alt="PSU-Logo" width="80" height="120"/>
                         </a>
                     </div>
 
@@ -47,6 +47,7 @@
             </div>
         </div>
     </div>
+ 
 
     <!-- Navigation Bar -->
     <div class="w3-bar w3-border w3-lime w3-center">
@@ -60,39 +61,30 @@
 
     <!-- Body -->
     <div class="w3-row">
-        <div class="w3-col w3-white w3-container" style="width:40%">
-            <p>
+        <div class="w3-col w3-white w3-container" style="width:20%">
 
-            </p>
+
+
+        </div>
+        <div class="w3-col w3-white w3-container" style="width:60%">
+            <!-- loan1 กยศ. -->
+            <br/>
+                <div class="w3-container w3-lime w3-center">
+                    <h5>สถานะปัจจุบัน</h5>
+                </div>
+            <div class="w3-container w3-center">
+
+                <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=600&amp;wkst=1&amp;hl=th&amp;bgcolor=%23FFFFFF&amp;src=phuket.psu.ac.th_0u4bgbr6633qvmd920mtu77qag%40group.calendar.google.com&amp;color=%23711616&amp;ctz=Asia%2FBangkok" style="border-width:0" width="1000" height="600"></iframe>
+
+            </div>
         </div>
         <div class="w3-col w3-white w3-container" style="width:20%">
-            <!-- std-login -->
-            <br/><br/><br/><br/><br/>
-            <div class="w3-card-4">
-                <div class="w3-container w3-lime w3-center">
-                    <h2>นักศึกษาเข้าสู่ระบบ</h2>
-                </div>
-                    <div class="w3-container">
-                    <br/>
-                         <asp:Label ID="uidText" class="w3-label w3-text-lime" runat="server" Text="PSU Passport"></asp:Label>
-                        <asp:TextBox ID="uid" class="w3-input w3-border w3-sand" runat="server"></asp:TextBox>
-                    <br/>
-                        <asp:Label ID="pwdText" class="w3-label w3-text-lime" runat="server" Text="Password"></asp:Label>
-                        <asp:TextBox ID="pwd" class="w3-input w3-border w3-sand" type="password" runat="server"></asp:TextBox>
-                    <br/>
-                    <asp:Button ID="stdlogin" runat="server" class="w3-button w3-lime w3-center" Text="Login" OnClick="stdlogin_Click" />
-                    <br/><br/>
-                    </div>
-            </div>
+
+
 
         </div>
-        <div class="w3-col w3-white w3-container" style="width:40%">
-            <p>
-            
-            </p>
-        </div>
     </div>
-    <br/><br/><br/><br/><br/><br/>
+    <br/>
 
     <!--contact info  -->
     <div class="w3-row w3-border">
@@ -149,12 +141,12 @@
         </div>
         <div class="w3-third w3-container w3-white w3-center">
             <h6>@Copyright PSU-Phuket</h6>
-      <!--  <asp:Button ID="logoutBTN" runat="server" Text="Logout" OnClick="logoutBTN_Click" /> -->
+            <!-- <asp:Button ID="logoutBTN" runat="server" Text="Logout" /> -->
         </div>
         <div class="w3-third w3-container w3-white">
 
         </div>
     </div>
-</form>
+    </form>
 </body>
 </html>

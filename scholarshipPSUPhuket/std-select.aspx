@@ -1,39 +1,39 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="std-login.aspx.cs" Inherits="scholarshipPSUPhuket.std_login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="std-select.aspx.cs" Inherits="scholarshipPSUPhuket.std_select" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 5.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>นักศึกษาเข้าสู่ระบบ</title>
+    <title>เลือกรายการ</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css"/>
 </head>
 <body>
-    <form id="stdloginform" runat="server">
+<form id="stdselectform" runat="server">
     <!-- Header -->
-    <div class="w3-row">
+    <div class="w3-row ">
         <div class="w3-col w3-white w3-container" style="width:40%">
-            <div class="w3-row">
-                <div class="w3-col w3-white w3-container" style="width:15%">
-
-                    <div class="w3-container w3-white">
-                        <a href="/index.aspx">
-                          <img src="image/logo8.gif" class="w3-round-small" alt="PSU-Logo" width="80" height="120"/>
-                        </a>
+                <div class="w3-row">
+                    <div class="w3-col w3-white w3-container" style="width:15%">
+                        
+                            <div class="w3-container w3-white">
+                               <a href="/index.aspx">
+                                 <img src="image/logo8.gif" class="w3-round-small" alt="PSU-Logo" width="80" height="120"/>
+                               </a>
+                            </div>
+                        
                     </div>
-
-                </div>
-                <div class="w3-col w3-white w3-container" style="width:85%">
-
-                    <div class="w3-container w3-white">
-                        <h2>ทุนการศึกษา</h2>
-                        <h2>มหาวิทยาลัยสงขลานครินทร์ วิทยาเขตภูเก็ต</h2>
+                    <div class="w3-col w3-white w3-container" style="width:85%">
+                        
+                            <div class="w3-container w3-white">
+                                <h2>ทุนการศึกษา</h2>
+                                <h2>มหาวิทยาลัยสงขลานครินทร์ วิทยาเขตภูเก็ต</h2>
+                            </div>
+                       
                     </div>
-
                 </div>
-            </div>
-        </div>
+    </div>
         <div class="w3-col w3-white w3-container" style="width:45%"><p></p></div>
         <div class="w3-col w3-white w3-container" style="width:15%">
             <div class="w3-row">
@@ -50,49 +50,87 @@
 
     <!-- Navigation Bar -->
     <div class="w3-bar w3-border w3-lime w3-center">
-        <a style="width:20%" href="/std-login.aspx" class="w3-bar-item w3-button w3-mobile">ทุนทั่วไป</a>
+        <a style="width:20%" href="/std-select.aspx" class="w3-bar-item w3-button w3-mobile">ทุนทั่วไป</a>
         <a style="width:20%" href="/loan1.aspx" class="w3-bar-item w3-button w3-mobile">ทุน กยศ</a>
         <a style="width:20%" href="/loan2.aspx" class="w3-bar-item w3-button w3-mobile">ทุน กรอ</a>
         <a style="width:20%" href="#" class="w3-bar-item w3-button w3-mobile">ถาม-ตอบ</a>
         <a style="width:20%" href="/contactus.aspx" class="w3-bar-item w3-button w3-mobile">ติดต่อเรา</a>
     </div>
 
-
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
     <!-- Body -->
-    <div class="w3-row">
-        <div class="w3-col w3-white w3-container" style="width:40%">
-            <p>
+    <div class="w3-row w3-center">
+        
+        <div class="w3-container w3-center w3-quarter">
+            <!-- inside scholarship -->
+            <div class="w3-card-4 w3-center" style="width:50%;">
+                <header class="w3-container w3-lime w3-center">
+                    <h4>ทุนภายใน</h4>
+                </header>
 
-            </p>
-        </div>
-        <div class="w3-col w3-white w3-container" style="width:20%">
-            <!-- std-login -->
-            <br/><br/><br/><br/><br/>
-            <div class="w3-card-4">
-                <div class="w3-container w3-lime w3-center">
-                    <h2>นักศึกษาเข้าสู่ระบบ</h2>
-                </div>
+                <div class="w3-container">
                     <div class="w3-container">
-                    <br/>
-                         <asp:Label ID="uidText" class="w3-label w3-text-lime" runat="server" Text="PSU Passport"></asp:Label>
-                        <asp:TextBox ID="uid" class="w3-input w3-border w3-sand" runat="server"></asp:TextBox>
-                    <br/>
-                        <asp:Label ID="pwdText" class="w3-label w3-text-lime" runat="server" Text="Password"></asp:Label>
-                        <asp:TextBox ID="pwd" class="w3-input w3-border w3-sand" type="password" runat="server"></asp:TextBox>
-                    <br/>
-                    <asp:Button ID="stdlogin" runat="server" class="w3-button w3-lime w3-center" Text="Login" OnClick="stdlogin_Click" />
-                    <br/><br/>
+                        <div class="w3-panel w3-center" style="width:100%">
+                            <a class="w3-button w3-block w3-gray w3-center" href="/std-in-scholarship.aspx">เลือก</a>
+                        </div>
                     </div>
+                </div>
             </div>
+        </div>
 
+        <div class="w3-container w3-center w3-quarter">
+            <!-- outside scholarship -->
+            <div class="w3-card-4 w3-center" style="width:50%;">
+                <header class="w3-container w3-lime w3-center">
+                    <h4>ทุนภายนอก</h4>
+                </header>
+
+                <div class="w3-container">
+                    <div class="w3-container">
+                        <div class="w3-panel" style="width:100%">
+                            <a class="w3-button w3-block w3-gray w3-center" href="/std-out-scholarship.aspx">เลือก</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="w3-col w3-white w3-container" style="width:40%">
-            <p>
-            
-            </p>
+
+        <div class="w3-container w3-center w3-quarter">
+            <!-- work-hrs-add -->
+            <div class="w3-card-4 w3-center" style="width:50%;">
+                <header class="w3-container w3-lime w3-center">
+                    <h4>ชั่วโมงทำงาน</h4>
+                </header>
+
+                <div class="w3-container">
+                    <div class="w3-container">
+                        <div class="w3-panel" style="width:100%">
+                            <a class="w3-button w3-block w3-gray" href="#">เลือก</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <div class="w3-container w3-center w3-quarter">
+            <!-- select work place -->
+            <div class="w3-card-4 w3-center" style="width:50%;">
+                <header class="w3-container w3-lime w3-center">
+                    <h4>เลือกสถานที่ทำงาน</h4>
+                </header>
+
+                <div class="w3-container">
+                    <div class="w3-container">
+                        <div class="w3-panel" style="width:100%">
+                            <a class="w3-button w3-block w3-gray" href="#">เลือก</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
     </div>
-    <br/><br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/>
 
     <!--contact info  -->
     <div class="w3-row w3-border">
@@ -149,7 +187,7 @@
         </div>
         <div class="w3-third w3-container w3-white w3-center">
             <h6>@Copyright PSU-Phuket</h6>
-      <!--  <asp:Button ID="logoutBTN" runat="server" Text="Logout" OnClick="logoutBTN_Click" /> -->
+            <asp:Button ID="logoutBTN" runat="server" Text="Logout" />
         </div>
         <div class="w3-third w3-container w3-white">
 

@@ -10,15 +10,24 @@
 namespace scholarshipPSUPhuket {
     
     
-    public partial class index {
+    public partial class std_out_scholarship {
         
         /// <summary>
-        /// form1 control.
+        /// stdoutsholarship control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm stdoutsholarship;
+        
+        /// <summary>
+        /// logoutBTN control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button logoutBTN;
     }
 }

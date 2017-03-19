@@ -1,16 +1,16 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="std-login.aspx.cs" Inherits="scholarshipPSUPhuket.std_login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="std-addwork.aspx.cs" Inherits="scholarshipPSUPhuket.aspx.std_addwork" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 5.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>นักศึกษาเข้าสู่ระบบ</title>
+    <title>บันทึกชั่วโมงการทำงาน</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css"/>
 </head>
 <body>
-    <form id="stdloginform" runat="server">
+<form id="stdaddworkform" runat="server">
     <!-- Header -->
     <div class="w3-row">
         <div class="w3-col w3-white w3-container" style="width:40%">
@@ -47,10 +47,11 @@
             </div>
         </div>
     </div>
+ 
 
     <!-- Navigation Bar -->
     <div class="w3-bar w3-border w3-lime w3-center">
-        <a style="width:20%" href="/std-login.aspx" class="w3-bar-item w3-button w3-mobile">ทุนทั่วไป</a>
+        <a style="width:20%" href="/std-select.aspx" class="w3-bar-item w3-button w3-mobile">ทุนทั่วไป</a>
         <a style="width:20%" href="/loan1.aspx" class="w3-bar-item w3-button w3-mobile">ทุน กยศ</a>
         <a style="width:20%" href="/loan2.aspx" class="w3-bar-item w3-button w3-mobile">ทุน กรอ</a>
         <a style="width:20%" href="#" class="w3-bar-item w3-button w3-mobile">ถาม-ตอบ</a>
@@ -60,39 +61,60 @@
 
     <!-- Body -->
     <div class="w3-row">
-        <div class="w3-col w3-white w3-container" style="width:40%">
-            <p>
-
-            </p>
-        </div>
         <div class="w3-col w3-white w3-container" style="width:20%">
-            <!-- std-login -->
-            <br/><br/><br/><br/><br/>
+
+
+
+        </div>
+        <div class="w3-col w3-white w3-container" style="width:60%">
+            <!-- add work hrs -->
+            <br/>
             <div class="w3-card-4">
                 <div class="w3-container w3-lime w3-center">
-                    <h2>นักศึกษาเข้าสู่ระบบ</h2>
+                    <h2>รายละเอียดการทำงาน</h2>
                 </div>
                     <div class="w3-container">
-                    <br/>
-                         <asp:Label ID="uidText" class="w3-label w3-text-lime" runat="server" Text="PSU Passport"></asp:Label>
-                        <asp:TextBox ID="uid" class="w3-input w3-border w3-sand" runat="server"></asp:TextBox>
-                    <br/>
-                        <asp:Label ID="pwdText" class="w3-label w3-text-lime" runat="server" Text="Password"></asp:Label>
-                        <asp:TextBox ID="pwd" class="w3-input w3-border w3-sand" type="password" runat="server"></asp:TextBox>
-                    <br/>
-                    <asp:Button ID="stdlogin" runat="server" class="w3-button w3-lime w3-center" Text="Login" OnClick="stdlogin_Click" />
-                    <br/><br/>
+                    <p>
+                        <asp:Label ID="workdateL" class="w3-label w3-text-black" runat="server" Text="วัน/เดือน/ปี"></asp:Label>
+                        <asp:TextBox ID="workdateT" class="w3-input w3-border w3-sand" runat="server" required="" type="date"></asp:TextBox>
+                    </p>
+                    <p>
+                        <asp:Label ID="sttimeL" class="w3-label w3-text-black" runat="server" Text="เวลาเริ่มงาน"></asp:Label>
+                        <asp:TextBox ID="sttimeT" class="w3-input w3-border w3-sand" runat="server" required="" type="time"></asp:TextBox>
+                    </p>
+                    <p>
+                        <asp:Label ID="edtimeL" class="w3-label w3-text-black" runat="server" Text="เวลากลับ"></asp:Label>
+                        <asp:TextBox ID="edtimeT" class="w3-input w3-border w3-sand" runat="server" required="" type="time"></asp:TextBox>
+                    </p>
+                    <p>
+                        <asp:Label ID="hrsL" class="w3-label w3-text-black" runat="server" Text="เวลารวม(ชั่วโมง)"></asp:Label>
+                        <asp:TextBox ID="hrsT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
+                    </p>
+                    <p>
+                        <asp:Label ID="phoneL" class="w3-label w3-text-black" runat="server" Text="เบอร์โทรศัพท์"></asp:Label>
+                        <asp:TextBox ID="phoneT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
+                    </p>
+                    <p>
+                        <asp:Label ID="jobdisL" class="w3-label w3-text-black" runat="server" Text="ลักษณะงานที่ทำ"></asp:Label>
+                        <asp:TextBox ID="jobdisT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
+                    </p>
+                    <p>
+                        <asp:Label ID="jobofficerL" class="w3-label w3-text-black" runat="server" Text="ผู้คุมงาน"></asp:Label>
+                        <asp:TextBox ID="jobofficerT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
+                    </p>
+                    <p>
+                        <asp:Button ID="addworksave" runat="server" class="w3-button w3-lime w3-center" Text="บันทึก" OnClick="addworksave_Click" />
+                    </p>
                     </div>
             </div>
+        </div>
+        <div class="w3-col w3-white w3-container" style="width:20%">
+
+
 
         </div>
-        <div class="w3-col w3-white w3-container" style="width:40%">
-            <p>
-            
-            </p>
-        </div>
     </div>
-    <br/><br/><br/><br/><br/><br/>
+    <br/>
 
     <!--contact info  -->
     <div class="w3-row w3-border">
@@ -149,7 +171,7 @@
         </div>
         <div class="w3-third w3-container w3-white w3-center">
             <h6>@Copyright PSU-Phuket</h6>
-      <!--  <asp:Button ID="logoutBTN" runat="server" Text="Logout" OnClick="logoutBTN_Click" /> -->
+            <asp:Button ID="logoutBTN" runat="server" Text="Logout" />
         </div>
         <div class="w3-third w3-container w3-white">
 

@@ -10,61 +10,61 @@
 namespace scholarshipPSUPhuket {
     
     
-    public partial class std_login {
+    public partial class officer_login {
         
         /// <summary>
-        /// stdloginform control.
+        /// officerform control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm stdloginform;
+        protected global::System.Web.UI.HtmlControls.HtmlForm officerform;
         
         /// <summary>
-        /// uidText control.
+        /// offidT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label uidText;
+        protected global::System.Web.UI.WebControls.Label offidT;
         
         /// <summary>
-        /// uid control.
+        /// offid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox uid;
+        protected global::System.Web.UI.WebControls.TextBox offid;
         
         /// <summary>
-        /// pwdText control.
+        /// offpwdT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label pwdText;
+        protected global::System.Web.UI.WebControls.Label offpwdT;
         
         /// <summary>
-        /// pwd control.
+        /// offpwd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox pwd;
+        protected global::System.Web.UI.WebControls.TextBox offpwd;
         
         /// <summary>
-        /// stdlogin control.
+        /// offlogin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button stdlogin;
+        protected global::System.Web.UI.WebControls.Button offlogin;
         
         /// <summary>
         /// logoutBTN control.

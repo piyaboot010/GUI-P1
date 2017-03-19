@@ -1,26 +1,26 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="std-login.aspx.cs" Inherits="scholarshipPSUPhuket.std_login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="admin-login.aspx.cs" Inherits="scholarshipPSUPhuket.admin_login" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 5.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>นักศึกษาเข้าสู่ระบบ</title>
+    <title>Admin เข้าสู่ระบบ</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css"/>
 </head>
 <body>
-    <form id="stdloginform" runat="server">
-    <!-- Header -->
+ <form id="adminform" runat="server">
+     <!-- Header -->
     <div class="w3-row">
         <div class="w3-col w3-white w3-container" style="width:40%">
             <div class="w3-row">
                 <div class="w3-col w3-white w3-container" style="width:15%">
 
                     <div class="w3-container w3-white">
-                        <a href="/index.aspx">
-                          <img src="image/logo8.gif" class="w3-round-small" alt="PSU-Logo" width="80" height="120"/>
-                        </a>
+                       <a href="/index.aspx">
+                         <img src="image/logo8.gif" class="w3-round-small" alt="PSU-Logo" width="80" height="120"/>
+                       </a>
                     </div>
 
                 </div>
@@ -51,10 +51,10 @@
     <!-- Navigation Bar -->
     <div class="w3-bar w3-border w3-lime w3-center">
         <a style="width:20%" href="/std-login.aspx" class="w3-bar-item w3-button w3-mobile">ทุนทั่วไป</a>
-        <a style="width:20%" href="/loan1.aspx" class="w3-bar-item w3-button w3-mobile">ทุน กยศ</a>
-        <a style="width:20%" href="/loan2.aspx" class="w3-bar-item w3-button w3-mobile">ทุน กรอ</a>
+        <a style="width:20%" href="#" class="w3-bar-item w3-button w3-mobile">ทุน กยศ</a>
+        <a style="width:20%" href="#" class="w3-bar-item w3-button w3-mobile">ทุน กรอ</a>
         <a style="width:20%" href="#" class="w3-bar-item w3-button w3-mobile">ถาม-ตอบ</a>
-        <a style="width:20%" href="/contactus.aspx" class="w3-bar-item w3-button w3-mobile">ติดต่อเรา</a>
+        <a style="width:20%" href="#" class="w3-bar-item w3-button w3-mobile">ติดต่อเรา</a>
     </div>
 
 
@@ -70,17 +70,17 @@
             <br/><br/><br/><br/><br/>
             <div class="w3-card-4">
                 <div class="w3-container w3-lime w3-center">
-                    <h2>นักศึกษาเข้าสู่ระบบ</h2>
+                    <h2>เข้าสู่ระบบ</h2>
                 </div>
                     <div class="w3-container">
                     <br/>
-                         <asp:Label ID="uidText" class="w3-label w3-text-lime" runat="server" Text="PSU Passport"></asp:Label>
-                        <asp:TextBox ID="uid" class="w3-input w3-border w3-sand" runat="server"></asp:TextBox>
+                        <asp:Label ID="adminidT" class="w3-label w3-text-lime" runat="server" Text="PSU Passport"></asp:Label>
+                        <asp:TextBox ID="adminid" class="w3-input w3-border w3-sand" runat="server"></asp:TextBox>
                     <br/>
-                        <asp:Label ID="pwdText" class="w3-label w3-text-lime" runat="server" Text="Password"></asp:Label>
-                        <asp:TextBox ID="pwd" class="w3-input w3-border w3-sand" type="password" runat="server"></asp:TextBox>
+                        <asp:Label ID="adminpwdT" class="w3-label w3-text-lime" runat="server" Text="Password"></asp:Label>
+                        <asp:TextBox ID="adminpwd" class="w3-input w3-border w3-sand" type="password" runat="server"></asp:TextBox>
                     <br/>
-                    <asp:Button ID="stdlogin" runat="server" class="w3-button w3-lime w3-center" Text="Login" OnClick="stdlogin_Click" />
+                        <asp:Button ID="adminlogin" runat="server" class="w3-button w3-lime w3-center" Text="Login" OnClick="adminlogin_Click" />
                     <br/><br/>
                     </div>
             </div>
@@ -148,8 +148,8 @@
 
         </div>
         <div class="w3-third w3-container w3-white w3-center">
-            <h6>@Copyright PSU-Phuket</h6>
-      <!--  <asp:Button ID="logoutBTN" runat="server" Text="Logout" OnClick="logoutBTN_Click" /> -->
+            <h5>@Copyright PSU-Phuket</h5>
+      <!--  <asp:Button ID="logoutBTN" runat="server" Text="Logout" /> -->
         </div>
         <div class="w3-third w3-container w3-white">
 

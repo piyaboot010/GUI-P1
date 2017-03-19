@@ -14,7 +14,12 @@ namespace scholarshipPSUPhuket
 
         }
 
-        protected void Button2_Click(object sender, EventArgs e)
+        protected void stdlogin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void logoutBTN_Click(object sender, EventArgs e)
         {
 
         }

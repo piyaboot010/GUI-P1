@@ -94,12 +94,30 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="admin-login.html" />
-    <Content Include="contactus.html" />
+    <Content Include="admin-login.aspx" />
+    <Content Include="backselect.aspx" />
+    <Content Include="contactus.aspx" />
+    <Content Include="image\s1.jpg" />
+    <Content Include="image\s10.jpg" />
+    <Content Include="image\s2.jpg" />
+    <Content Include="image\s3.jpg" />
+    <Content Include="image\s4.jpg" />
+    <Content Include="image\s5.jpg" />
+    <Content Include="image\s6.jpg" />
+    <Content Include="image\s7.jpg" />
+    <Content Include="image\s8.jpg" />
+    <Content Include="image\s9.jpg" />
+    <Content Include="loan1.aspx" />
+    <Content Include="loan2.aspx" />
+    <Content Include="std-addwork.aspx" />
+    <Content Include="HTML\admin-login.html" />
+    <Content Include="autor-login.aspx" />
+    <Content Include="HTML\contactus.html" />
     <Content Include="image\m.png" />
     <Content Include="image\t.png" />
-    <Content Include="officer-select.html" />
-    <Content Include="officer-login.html" />
+    <Content Include="officer-login.aspx" />
+    <Content Include="HTML\HTMLN\officer-select.html" />
+    <Content Include="HTML\officer-login.html" />
     <Content Include="image\building.png" />
     <Content Include="image\call-center.png" />
     <Content Include="image\clock.png" />
@@ -120,23 +138,25 @@
     <Content Include="image\w3.jpg" />
     <Content Include="image\youtube.png" />
     <Content Include="index.aspx" />
-    <Content Include="atoff-login.html" />
-    <Content Include="allofficer-select.html" />
+    <Content Include="HTML\HTMLN\atoff-login.html" />
+    <Content Include="HTML\HTMLN\allofficer-select.html" />
     <Content Include="std-in-scholarship.aspx" />
     <Content Include="std-login.aspx" />
-    <Content Include="std-select.html" />
-    <Content Include="std-login.html" />
-    <Content Include="officer-request.html" />
-    <Content Include="test.aspx" />
-    <Content Include="std-in-scholarship.html" />
-    <Content Include="work-hr-add.html" />
-    <Content Include="std-select-work-place.html" />
-    <Content Include="officer-approve.html" />
-    <Content Include="index.html" />
+    <Content Include="std-out-scholarship.aspx" />
+    <Content Include="std-select.aspx" />
+    <Content Include="HTML\std-select.html" />
+    <Content Include="HTML\std-login.html" />
+    <Content Include="HTML\HTMLN\officer-request.html" />
+    <Content Include="HTML\std-in-scholarship.html" />
+    <Content Include="HTML\HTMLN\work-hr-add.html" />
+    <Content Include="HTML\HTMLN\std-select-work-place.html" />
+    <Content Include="HTML\HTMLN\officer-approve.html" />
+    <Content Include="HTML\index.html" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="pdf\UGRAD2017.pdf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -152,12 +172,68 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin-login.aspx.cs">
+      <DependentUpon>admin-login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin-login.aspx.designer.cs">
+      <DependentUpon>admin-login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="autor-login.aspx.cs">
+      <DependentUpon>autor-login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="autor-login.aspx.designer.cs">
+      <DependentUpon>autor-login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="backselect.aspx.cs">
+      <DependentUpon>backselect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backselect.aspx.designer.cs">
+      <DependentUpon>backselect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="contactus.aspx.cs">
+      <DependentUpon>contactus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contactus.aspx.designer.cs">
+      <DependentUpon>contactus.aspx</DependentUpon>
+    </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="loan1.aspx.cs">
+      <DependentUpon>loan1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="loan1.aspx.designer.cs">
+      <DependentUpon>loan1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="loan2.aspx.cs">
+      <DependentUpon>loan2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="loan2.aspx.designer.cs">
+      <DependentUpon>loan2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="officer-login.aspx.cs">
+      <DependentUpon>officer-login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="officer-login.aspx.designer.cs">
+      <DependentUpon>officer-login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="std-addwork.aspx.cs">
+      <DependentUpon>std-addwork.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="std-addwork.aspx.designer.cs">
+      <DependentUpon>std-addwork.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="std-in-scholarship.aspx.cs">
@@ -174,15 +250,24 @@
     <Compile Include="std-login.aspx.designer.cs">
       <DependentUpon>std-login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="test.aspx.cs">
-      <DependentUpon>test.aspx</DependentUpon>
+    <Compile Include="std-out-scholarship.aspx.cs">
+      <DependentUpon>std-out-scholarship.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="test.aspx.designer.cs">
-      <DependentUpon>test.aspx</DependentUpon>
+    <Compile Include="std-out-scholarship.aspx.designer.cs">
+      <DependentUpon>std-out-scholarship.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="std-select.aspx.cs">
+      <DependentUpon>std-select.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="std-select.aspx.designer.cs">
+      <DependentUpon>std-select.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="aspx\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

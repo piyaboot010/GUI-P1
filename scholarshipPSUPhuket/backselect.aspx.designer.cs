@@ -10,24 +10,24 @@
 namespace scholarshipPSUPhuket {
     
     
-    public partial class test {
+    public partial class backselect {
         
         /// <summary>
-        /// form1 control.
+        /// backselectform control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm backselectform;
         
         /// <summary>
-        /// Button1 control.
+        /// logoutBTN control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button logoutBTN;
     }
 }

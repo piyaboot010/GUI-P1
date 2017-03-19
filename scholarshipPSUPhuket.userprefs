@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{1F7C5931-44B7-41C1-9F30-B5D7DE05839E}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="scholarshipPSUPhuket/index.aspx">
+    <Files>
+      <File FileName="scholarshipPSUPhuket/admin-login.aspx" Line="18" Column="62" />
+      <File FileName="scholarshipPSUPhuket/index.aspx" Line="16" Column="8" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.scholarshipPSUPhuket PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

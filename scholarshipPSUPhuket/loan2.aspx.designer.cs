@@ -10,15 +10,24 @@
 namespace scholarshipPSUPhuket {
     
     
-    public partial class index {
+    public partial class loan2 {
         
         /// <summary>
-        /// form1 control.
+        /// loan2form control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.HtmlControls.HtmlForm loan2form;
+        
+        /// <summary>
+        /// logoutBTN control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button logoutBTN;
     }
 }
