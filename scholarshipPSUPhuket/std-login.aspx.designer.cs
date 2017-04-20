@@ -22,40 +22,40 @@ namespace scholarshipPSUPhuket {
         protected global::System.Web.UI.HtmlControls.HtmlForm stdloginform;
         
         /// <summary>
-        /// uidText control.
+        /// lbusername control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label uidText;
+        protected global::System.Web.UI.WebControls.Label lbusername;
         
         /// <summary>
-        /// uid control.
+        /// txtusername control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox uid;
+        protected global::System.Web.UI.WebControls.TextBox txtusername;
         
         /// <summary>
-        /// pwdText control.
+        /// lbpassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label pwdText;
+        protected global::System.Web.UI.WebControls.Label lbpassword;
         
         /// <summary>
-        /// pwd control.
+        /// txtpassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox pwd;
+        protected global::System.Web.UI.WebControls.TextBox txtpassword;
         
         /// <summary>
         /// stdlogin control.
@@ -65,6 +65,15 @@ namespace scholarshipPSUPhuket {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button stdlogin;
+        
+        /// <summary>
+        /// lberror control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lberror;
         
         /// <summary>
         /// logoutBTN control.

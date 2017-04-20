@@ -70,9 +70,13 @@
         <div class="w3-col w3-white w3-container" style="width:60%">
             <!-- std-in-scholarship -->
             <br/>
-                <div class="w3-container w3-lime w3-center">
+<%--                <div class="w3-container w3-lime w3-center">
                     <h4>แบบฟอร์มขอทุน</h4>
+                </div>--%>
+                <div class="w3-container">
+                    <script type="text/javascript" src="https://form.jotform.me/jsform/70945216980462"></script>
                 </div>
+            <!--
             <div class="w3-card-4" style="overflow-y: scroll; height:600px;">
                     <div class="w3-container">
                     <fieldset>
@@ -480,9 +484,10 @@
                     </p>
                     </div>
             </div>
+            -->
         </div>
         <div class="w3-col w3-white w3-container" style="width:20%">
-
+             
 
 
         </div>

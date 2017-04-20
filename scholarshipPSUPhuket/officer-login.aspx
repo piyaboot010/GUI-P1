@@ -74,13 +74,15 @@
                 </div>
                     <div class="w3-container">
                     <br/>
-                        <asp:Label ID="offidT" class="w3-label w3-text-lime" runat="server" Text="PSU Passport"></asp:Label>
-                        <asp:TextBox ID="offid" class="w3-input w3-border w3-sand" runat="server"></asp:TextBox>
+                        <asp:Label ID="lbusername" class="w3-label w3-text-lime" runat="server" Text="PSU Passport"></asp:Label>
+                        <asp:TextBox ID="txtusername" class="w3-input w3-border w3-sand" runat="server"></asp:TextBox>
                     <br/>
-                        <asp:Label ID="offpwdT" class="w3-label w3-text-lime" runat="server" Text="Password"></asp:Label>
-                        <asp:TextBox ID="offpwd" class="w3-input w3-border w3-sand" type="password" runat="server"></asp:TextBox>
+                        <asp:Label ID="lbpassword" class="w3-label w3-text-lime" runat="server" Text="Password"></asp:Label>
+                        <asp:TextBox ID="txtpassword" class="w3-input w3-border w3-sand" type="password" runat="server"></asp:TextBox>
                     <br/>
                         <asp:Button ID="offlogin" runat="server" class="w3-button w3-lime w3-center" Text="Login" OnClick="offlogin_Click" />
+                    <be/>
+                        <asp:Label ID="lberror" runat="server" Text=""></asp:Label>
                     <br/><br/>
                     </div>
             </div>

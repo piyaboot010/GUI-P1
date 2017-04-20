@@ -95,8 +95,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin-login.aspx" />
+    <Content Include="Autor-approve.aspx" />
+    <Content Include="autor-requestStd.aspx" />
+    <Content Include="autor-select.aspx" />
     <Content Include="backselect.aspx" />
     <Content Include="contactus.aspx" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
     <Content Include="image\s1.jpg" />
     <Content Include="image\s10.jpg" />
     <Content Include="image\s2.jpg" />
@@ -109,6 +114,13 @@
     <Content Include="image\s9.jpg" />
     <Content Include="loan1.aspx" />
     <Content Include="loan2.aspx" />
+    <Content Include="officer-sch-namelist.aspx" />
+    <Content Include="officer-select.aspx" />
+    <Content Include="officer-stdRequest.aspx" />
+    <Content Include="officer-workMonitor.aspx" />
+    <Content Include="officer-workplace-selectList.aspx" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\bootstrap.min.js" />
     <Content Include="std-addwork.aspx" />
     <Content Include="HTML\admin-login.html" />
     <Content Include="autor-login.aspx" />
@@ -143,6 +155,7 @@
     <Content Include="std-in-scholarship.aspx" />
     <Content Include="std-login.aspx" />
     <Content Include="std-out-scholarship.aspx" />
+    <Content Include="std-select-workplace.aspx" />
     <Content Include="std-select.aspx" />
     <Content Include="HTML\std-select.html" />
     <Content Include="HTML\std-login.html" />
@@ -157,6 +170,15 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="pdf\UGRAD2017.pdf" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\th.ac.psu.passport\authentication.wsdl" />
+    <Content Include="Web References\th.ac.psu.passport\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -179,12 +201,33 @@
     <Compile Include="admin-login.aspx.designer.cs">
       <DependentUpon>admin-login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Autor-approve.aspx.cs">
+      <DependentUpon>Autor-approve.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Autor-approve.aspx.designer.cs">
+      <DependentUpon>Autor-approve.aspx</DependentUpon>
+    </Compile>
     <Compile Include="autor-login.aspx.cs">
       <DependentUpon>autor-login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="autor-login.aspx.designer.cs">
       <DependentUpon>autor-login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="autor-requestStd.aspx.cs">
+      <DependentUpon>autor-requestStd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="autor-requestStd.aspx.designer.cs">
+      <DependentUpon>autor-requestStd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="autor-select.aspx.cs">
+      <DependentUpon>autor-select.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="autor-select.aspx.designer.cs">
+      <DependentUpon>autor-select.aspx</DependentUpon>
     </Compile>
     <Compile Include="backselect.aspx.cs">
       <DependentUpon>backselect.aspx</DependentUpon>
@@ -221,12 +264,52 @@
     <Compile Include="loan2.aspx.designer.cs">
       <DependentUpon>loan2.aspx</DependentUpon>
     </Compile>
+    <Compile Include="officer-sch-namelist.aspx.cs">
+      <DependentUpon>officer-sch-namelist.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="officer-sch-namelist.aspx.designer.cs">
+      <DependentUpon>officer-sch-namelist.aspx</DependentUpon>
+    </Compile>
     <Compile Include="officer-login.aspx.cs">
       <DependentUpon>officer-login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="officer-login.aspx.designer.cs">
       <DependentUpon>officer-login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="officer-select.aspx.cs">
+      <DependentUpon>officer-select.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="officer-select.aspx.designer.cs">
+      <DependentUpon>officer-select.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="officer-stdRequest.aspx.cs">
+      <DependentUpon>officer-stdRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="officer-stdRequest.aspx.designer.cs">
+      <DependentUpon>officer-stdRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="officer-workMonitor.aspx.cs">
+      <DependentUpon>officer-workMonitor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="officer-workMonitor.aspx.designer.cs">
+      <DependentUpon>officer-workMonitor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="officer-workplace-selectList.aspx.cs">
+      <DependentUpon>officer-workplace-selectList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="officer-workplace-selectList.aspx.designer.cs">
+      <DependentUpon>officer-workplace-selectList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="std-addwork.aspx.cs">
       <DependentUpon>std-addwork.aspx</DependentUpon>
@@ -257,6 +340,13 @@
     <Compile Include="std-out-scholarship.aspx.designer.cs">
       <DependentUpon>std-out-scholarship.aspx</DependentUpon>
     </Compile>
+    <Compile Include="std-select-workplace.aspx.cs">
+      <DependentUpon>std-select-workplace.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="std-select-workplace.aspx.designer.cs">
+      <DependentUpon>std-select-workplace.aspx</DependentUpon>
+    </Compile>
     <Compile Include="std-select.aspx.cs">
       <DependentUpon>std-select.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -264,9 +354,33 @@
     <Compile Include="std-select.aspx.designer.cs">
       <DependentUpon>std-select.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Web References\th.ac.psu.passport\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="aspx\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://passport.psu.ac.th/authentication/authentication.asmx%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\th.ac.psu.passport\</RelPath>
+      <UpdateFromURL>https://passport.psu.ac.th/authentication/authentication.asmx%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>scholarshipPSUPhuket_th_ac_psu_passport_Authentication</CachedSettingsPropName>
+    </WebReferenceUrl>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="std-select.aspx.cs" Inherits="scholarshipPSUPhuket.std_select" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="officer-select.aspx.cs" Inherits="scholarshipPSUPhuket.officer_select" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 5.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -8,9 +8,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css"/>
+
 </head>
 <body>
-<form id="stdselectform" runat="server">
+    <form id="officerselectform" runat="server">
     <!-- Header -->
     <div class="w3-row ">
         <div class="w3-col w3-white w3-container" style="width:40%">
@@ -57,80 +58,151 @@
         <a style="width:20%" href="/contactus.aspx" class="w3-bar-item w3-button w3-mobile">ติดต่อเรา</a>
     </div>
 
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    <!-- Body -->
-    <div class="w3-row w3-center">
-        
-        <div class="w3-container w3-center w3-quarter">
-            <!-- inside scholarship -->
-            <div class="w3-card-4 w3-center" style="width:50%;">
+            <!-- Body -->
+    <div class="w3-row">
+        <div class="w3-col w3-white w3-container" style="width:20%">
+
+
+
+        </div>
+        <div class="w3-col w3-white w3-container" style="width:60%">
+           <br/><br/><br/><br/><br/><br/>
+<div class="w3-row-padding w3-center">
+        <div class="w3-col l3 w3-center">
+            <!-- main -->
+            <div class="w3-card-4 w3-center" style="width:100%;">
                 <header class="w3-container w3-lime w3-center">
-                    <h4>ทุนภายใน</h4>
+                    <h4>หน้าหลัก</h4>
                 </header>
 
                 <div class="w3-container">
                     <div class="w3-container">
                         <div class="w3-panel w3-center" style="width:100%">
-                            <a class="w3-button w3-block w3-gray w3-center" href="/std-in-scholarship.aspx">เลือก</a>
+                            <a class="w3-button w3-block w3-gray w3-center w3-disabled" href="#">เลือก</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="w3-container w3-center w3-quarter">
-            <!-- outside scholarship -->
-            <div class="w3-card-4 w3-center" style="width:50%;">
+        <div class="w3-col l3 w3-center">
+            <!-- file upload -->
+            <div class="w3-card-4 w3-center" style="width:100%;">
                 <header class="w3-container w3-lime w3-center">
-                    <h4>ทุนภายนอก</h4>
+                    <h4>upload เอกสาร</h4>
                 </header>
 
                 <div class="w3-container">
                     <div class="w3-container">
                         <div class="w3-panel" style="width:100%">
-                            <a class="w3-button w3-block w3-gray w3-center" href="/std-out-scholarship.aspx">เลือก</a>
+                            <a class="w3-button w3-block w3-gray w3-center w3-disabled" href="#">เลือก</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="w3-container w3-center w3-quarter">
-            <!-- work-hrs-add -->
-            <div class="w3-card-4 w3-center" style="width:50%;">
+        <div class="w3-col l3 w3-center">
+            <!-- time table -->
+            <div class="w3-card-4 w3-center" style="width:100%;">
                 <header class="w3-container w3-lime w3-center">
-                    <h4>ชั่วโมงทำงาน</h4>
+                    <h4>ตารางทำงาน</h4>
                 </header>
 
                 <div class="w3-container">
                     <div class="w3-container">
                         <div class="w3-panel" style="width:100%">
-                            <a class="w3-button w3-block w3-gray" href="/std-addwork.aspx">เลือก</a>
+                            <a class="w3-button w3-block w3-gray" href="/officer-workMonitor.aspx">เลือก</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="w3-container w3-center w3-quarter">
-            <!-- select work place -->
-            <div class="w3-card-4 w3-center" style="width:50%;">
+        <div class="w3-col l3 w3-center">
+            <!-- set piority -->
+            <div class="w3-card-4 w3-center" style="width:100%;">
                 <header class="w3-container w3-lime w3-center">
-                    <h4>เลือกสถานที่ทำงาน</h4>
+                    <h4>กำหนดสิทธิ์เจ้าหน้าที่</h4>
                 </header>
 
                 <div class="w3-container">
                     <div class="w3-container">
                         <div class="w3-panel" style="width:100%">
-                            <a class="w3-button w3-block w3-gray" href="/std-select-workplace.aspx">เลือก</a>
+                            <a class="w3-button w3-block w3-gray w3-disabled" href="#">เลือก</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-       
+</div>
+<br/><br/>
+
+    <div class="w3-row-padding w3-center">
+        <div class="w3-col l3 w3-center">
+            <!-- set student -->
+            <div class="w3-card-4 w3-center" style="width:100%;">
+                <header class="w3-container w3-lime w3-center">
+                    <h4>นักศึกษาทีสมัครทุน</h4>
+                </header>
+
+                <div class="w3-container">
+                    <div class="w3-container">
+                        <div class="w3-panel w3-center" style="width:100%">
+                            <a class="w3-button w3-block w3-gray w3-center" href="/officer-sch-namelist.aspx">เลือก</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-col l3 w3-center">
+            <!-- student request -->
+            <div class="w3-card-4 w3-center" style="width:100%;">
+                <header class="w3-container w3-lime w3-center">
+                    <h4>นักศึกษาช่วยงาน</h4>
+                </header>
+
+                <div class="w3-container">
+                    <div class="w3-container">
+                        <div class="w3-panel" style="width:100%">
+                            <a class="w3-button w3-block w3-gray w3-center" href="/officer-stdRequest.aspx">เลือก</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w3-col l3 w3-center">
+            <!-- request student -->
+            <div class="w3-card-4 w3-center" style="width:100%;">
+                <header class="w3-container w3-lime w3-center">
+                    <h4>นักศึกษาเลือกที่ทำงาน</h4>
+                </header>
+
+                <div class="w3-container">
+                    <div class="w3-container">
+                        <div class="w3-panel" style="width:100%">
+                            <a class="w3-button w3-block w3-gray w3-center" href="/officer-workplace-selectList.aspx">เลือก</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        </div>
+        <div class="w3-col w3-white w3-container" style="width:20%">
+
+
+
+        </div>
+    </div>
+    <br/>
+
+    <!-- Body -->
+
+
+    <br/><br/><br/><br/><br/>
 
     <!--contact info  -->
     <div class="w3-row w3-border">
@@ -193,6 +265,6 @@
 
         </div>
     </div>
-</form>
+    </form>
 </body>
 </html>

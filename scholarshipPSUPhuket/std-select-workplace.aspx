@@ -1,26 +1,26 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="std-addwork.aspx.cs" Inherits="scholarshipPSUPhuket.aspx.std_addwork" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="std-select-workplace.aspx.cs" Inherits="scholarshipPSUPhuket.std_select_workplace" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 5.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>บันทึกชั่วโมงการทำงาน</title>
+    <title>เลือกสถานที่ทำงาน</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css"/>
 </head>
 <body>
-<form id="stdaddworkform" runat="server">
-    <!-- Header -->
+    <form id="StdSelectWorkPlaceForm" runat="server">
+     <!-- Header -->
     <div class="w3-row">
         <div class="w3-col w3-white w3-container" style="width:40%">
             <div class="w3-row">
                 <div class="w3-col w3-white w3-container" style="width:15%">
 
                     <div class="w3-container w3-white">
-                        <a href="/index.aspx">
+                       <a href="/index.aspx">
                           <img src="image/logo8.gif" class="w3-round-small" alt="PSU-Logo" width="80" height="120"/>
-                        </a>
+                       </a>
                     </div>
 
                 </div>
@@ -66,53 +66,24 @@
 
 
         </div>
+        <!--
         <div class="w3-col w3-white w3-container" style="width:60%">
-            <!-- add work hrs -->
+            <!-- std-in-scholarship 
             <br/>
-            <!--
-            <div class="w3-card-4">
                 <div class="w3-container w3-lime w3-center">
-                    <h2>รายละเอียดการทำงาน</h2>
+                    <h4>แบบฟอร์มขอทุน</h4>
+                </div>            
+            <div class="w3-card-4">
+            -->
+                <div class="w3-container">
+                     <iframe id="JotFormIFrame-70994047580464" onload="window.parent.scrollTo(0,0)" allowtransparency="true" src="https://form.jotform.me/70994047580464" frameborder="0" style="width:100%; height:0px; border:none;" scrolling="no"> </iframe> <script type="text/javascript"> var ifr = document.getElementById("JotFormIFrame-70994047580464"); if(window.location.href && window.location.href.indexOf("?") > -1) { var get = window.location.href.substr(window.location.href.indexOf("?") + 1); if(ifr && get.length > 0) { var src = ifr.src; src = src.indexOf("?") > -1 ? src + "&" + get : src + "?" + get; ifr.src = src; } } window.handleIFrameMessage = function(e) { var args = e.data.split(":"); if (args.length > 2) { iframe = document.getElementById("JotFormIFrame-" + args[2]); } else { iframe = document.getElementById("JotFormIFrame"); } if (!iframe) return; switch (args[0]) { case "scrollIntoView": iframe.scrollIntoView(); break; case "setHeight": iframe.style.height = args[1] + "px"; break; case "collapseErrorPage": if (iframe.clientHeight > window.innerHeight) { iframe.style.height = window.innerHeight + "px"; } break; case "reloadPage": window.location.reload(); break; } var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false; if(isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) { var urls = {"docurl":encodeURIComponent(document.URL),"referrer":encodeURIComponent(document.referrer)}; iframe.contentWindow.postMessage(JSON.stringify({"type":"urls","value":urls}), "*"); } }; if (window.addEventListener) { window.addEventListener("message", handleIFrameMessage, false); } else if (window.attachEvent) { window.attachEvent("onmessage", handleIFrameMessage); } </script>
                 </div>
-                    <div class="w3-container">
-                    <p>
-                        <asp:Label ID="workdateL" class="w3-label w3-text-black" runat="server" Text="วัน/เดือน/ปี"></asp:Label>
-                        <asp:TextBox ID="workdateT" class="w3-input w3-border w3-sand" runat="server" required="" type="date"></asp:TextBox>
-                    </p>
-                    <p>
-                        <asp:Label ID="sttimeL" class="w3-label w3-text-black" runat="server" Text="เวลาเริ่มงาน"></asp:Label>
-                        <asp:TextBox ID="sttimeT" class="w3-input w3-border w3-sand" runat="server" required="" type="time"></asp:TextBox>
-                    </p>
-                    <p>
-                        <asp:Label ID="edtimeL" class="w3-label w3-text-black" runat="server" Text="เวลากลับ"></asp:Label>
-                        <asp:TextBox ID="edtimeT" class="w3-input w3-border w3-sand" runat="server" required="" type="time"></asp:TextBox>
-                    </p>
-                    <p>
-                        <asp:Label ID="hrsL" class="w3-label w3-text-black" runat="server" Text="เวลารวม(ชั่วโมง)"></asp:Label>
-                        <asp:TextBox ID="hrsT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
-                    </p>
-                    <p>
-                        <asp:Label ID="phoneL" class="w3-label w3-text-black" runat="server" Text="เบอร์โทรศัพท์"></asp:Label>
-                        <asp:TextBox ID="phoneT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
-                    </p>
-                    <p>
-                        <asp:Label ID="jobdisL" class="w3-label w3-text-black" runat="server" Text="ลักษณะงานที่ทำ"></asp:Label>
-                        <asp:TextBox ID="jobdisT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
-                    </p>
-                    <p>
-                        <asp:Label ID="jobofficerL" class="w3-label w3-text-black" runat="server" Text="ผู้คุมงาน"></asp:Label>
-                        <asp:TextBox ID="jobofficerT" class="w3-input w3-border w3-sand" runat="server" required="" type="text"></asp:TextBox>
-                    </p>
-                    <p>
-                        <asp:Button ID="addworksave" runat="server" class="w3-button w3-lime w3-center" Text="บันทึก" OnClick="addworksave_Click" />
-                    </p>
-                    </div>
-            </div> -->
-
-            <script type="text/javascript" src="https://form.jotform.me/jsform/70994837680472"></script>
-        </div>
+            <!--
+            </div>
+            -->
+        
         <div class="w3-col w3-white w3-container" style="width:20%">
-
+            
 
 
         </div>
@@ -180,6 +151,6 @@
 
         </div>
     </div>
-</form>
+    </form>
 </body>
 </html>
